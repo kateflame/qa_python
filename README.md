@@ -14,3 +14,5 @@
  test_get_not_empty_list_of_favorites_books_success тест на получение списка избранных книг
  test_get_books_for_children тест на книги для детей
  test_get_books_not_for_children негативный тест на книги для детей
+ test_get_books_genre тест проверяет работу получения словаря
+ test_get_book_genre_by_name тест проверяет получение жанра по книге

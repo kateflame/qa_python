@@ -89,3 +89,16 @@ class TestBooksCollector:
         collector_with_books.set_book_genre(book_names[2], genres[1])
         children_books = collector_with_books.get_books_for_children()
         assert book_names[2] not in children_books
+
+        # тест на проверку метода get_books_genre
+
+    def test_get_books_genre(self, collector):
+        test_dict = {book_names[0]: genres[0]}
+        collector.books_genre = test_dict
+        assert collector.get_books_genre() == test_dict
+
+    # тест на проверку метода get_book_genre
+    def test_get_book_genre_by_name(self, collector):
+        test_dict = {book_names[1]: genres[1]}
+        collector.books_genre = test_dict
+        assert collector.get_book_genre(book_names[1]) == genres[1]
